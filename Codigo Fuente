@@ -1,0 +1,237 @@
+# import raspberry pi GPIO module
+import RPi.GPIO as GPIO
+import math
+
+# configuracion de pines de entrada de la raspberry 
+GPIO.setup(3, GPIO.IN)
+GPIO.setup(5, GPIO.IN)
+GPIO.setup(7, GPIO.IN)
+GPIO.setup(8, GPIO.IN)
+GPIO.setup(10, GPIO.IN)
+GPIO.setup(11, GPIO.IN)
+GPIO.setup(12, GPIO.IN)
+GPIO.setup(13, GPIO.IN)
+GPIO.setup(15, GPIO.IN)
+GPIO.setup(18, GPIO.IN)
+GPIO.setup(19, GPIO.IN)
+GPIO.setup(21, GPIO.IN)
+GPIO.setup(22, GPIO.IN)
+GPIO.setup(23, GPIO.IN)
+GPIO.setup(38, GPIO.IN)
+GPIO.setup(40, GPIO.IN)
+
+#clase
+class Calculadora:
+#atributos de clase
+  numero1=0
+  numero2=0
+#Constructor
+  def __init__(self,numero1,numero2):
+    self.numero1=numero1
+    self.numero2=numero2
+    
+#metodos    
+  def sumar(self,numero1,numero2):
+    return (numero1+numero2)
+  
+  def restar(self,numero1,numero2):
+    return(numero1-numero2)
+  
+  def multiplicar(self,numero1,numero2):
+    return(numero1*numero2)
+  
+  def dividir(self,numero1,numero2):
+    return(numero1/numero2)
+
+  def seno(self,numero1):
+    return(math.sin(numero1))
+
+  def coseno(self,numero1):
+    return(math.cos(numero1))
+
+  def tangente(self,numero1):
+    return(math.tan(numero1))
+
+  def rad_grad(self,numero1):
+    return(math.radians(numero1))
+
+  def grad_rad(self,numero1):
+    return(math.degrees(numero1))
+
+  def logaritmo10(self,numero1):
+    return(math.log10(numero1))
+  
+  def exponencial(self,numero1):
+    return(math.exp(numero1))
+
+  def raiz(self,numero1):
+    return(math.sqrt(numero1))
+
+  def logaritmo_n(self,numero1,numero2):
+    return(math.log(numero1,numero2))
+
+  def potencia(self,numero1,numero2):
+    return(math.pow(numero1,numero2))
+
+  
+  def menu(self):
+    opcion=0
+    print("Que desea realizar? (presione un pin en la raspberry): ")
+    print("3) sumar")
+    print("5) restar")
+    print("7) multiplicar")
+    print("8) dividir (numero / numero2)")
+    print("10) sen(x)")
+    print("11) cos(x)")
+    print("12) tan(x)")
+    print("13) convertir Radianes a Grados ")
+    print("15) convertir Grados a Radianes ")
+    print("18) log10(x) (logaritmo base 10 de x)")
+    print("19) log(n)(x) (logaritmo en base n de x, numero = base, numero 2= argumento)")
+    print("21) exponencial e^x ")
+    print("22) raiz cuadrada(x)")
+    print("23) x^y (numero= base, numero 2= exponente)")
+
+    while opcion==0:
+      if GPIO.input(3): #sumar
+        opcion=1
+      elif GPIO.input(5): #restar
+        opcion=2
+      elif GPIO.input(7): #mult
+        opcion=3
+      elif GPIO.input(8): #dividir
+        opcion=4
+      elif GPIO.input(19): #logaritmo_n
+        opcion=5 
+      elif GPIO.input(23): #potencia
+        opcion=6
+
+      #funciones que necesitan 1 numero        
+      elif GPIO.input(10): #sen
+        opcion=7
+      elif GPIO.input(11): #cos
+        opcion=8
+      elif GPIO.input(12): #tan
+        opcion=9
+      elif GPIO.input(13): #grad_rad
+        opcion=10
+      elif GPIO.input(15): #rad_grad
+        opcion=11
+      elif GPIO.input(18): #logaritmo10
+        opcion=12   
+      elif GPIO.input(21): #exponencial
+        opcion=13
+      elif GPIO.input(22): #raiz
+        opcion=14   
+    return opcion  
+  
+  def leer(self,mensaje):
+    print(mensaje)
+    men1=float(input())
+    return men1
+  
+  def imprimir(self,num1,num2,resultado,operacion):
+    if operacion == 1:
+      print(num1,"+",num2,"=",resultado)
+    elif operacion == 2:
+      print(num1,"-",num2,"=",resultado)
+    elif operacion == 3:
+     print(num1,"*",num2,"=",resultado)
+    elif operacion == 4:
+      print(num1,"/",num2,"=",resultado)
+    elif operacion == 5:
+      print("log",num1,"(",num2,")","=",resultado)
+    elif operacion == 6:
+      print(num1,"^",num2,"=",resultado)
+    elif operacion == 7:
+      print("sen(",num1,")","=",resultado)
+    elif operacion == 8:
+      print("cos(",num1,")","=",resultado)
+    elif operacion == 9:
+      print("tan(",num1,")","=",resultado)
+    elif operacion == 10:
+      print(num1,"radianes","=",resultado,"grados")
+    elif operacion == 11:
+      print(num1,"grados","=",resultado,"radianes")
+    elif operacion == 12:
+      print("log10(",num1,")","=",resultado)
+    elif operacion == 13:
+      print("e^(",num1,")","=",resultado)
+    elif operacion == 14:
+      print("√(",num1,")","=",resultado)
+
+    else :
+      print("Operacion no establecida")
+
+
+  def operar(self,opcion,num1,num2):
+    resultado=0
+    if opcion==1: #sumar
+      resultado=self.sumar(num1,num2)
+    elif opcion==2: #restar
+      resultado=self.restar(num1,num2)
+    elif opcion==3: #mult
+      resultado=self.multiplicar (num1,num2)
+    elif opcion==4: #dividir
+      resultado=self.dividir(num1,num2)
+    elif opcion==5: #logaritmo_n
+      resultado=self.logaritmo_n(num1,num2) 
+    elif opcion==6: #potencia
+      resultado=self.potencia(num1,num2) 
+    
+    #funciones que necesitan 1 solo argumento
+    elif opcion==7: #sen
+      resultado=self.seno(num1)
+    elif opcion==8: #cos
+      resultado=self.coseno(num1)
+    elif opcion==9: #tan
+      resultado=self.tangente(num1)
+    elif opcion==10: #grad_rad
+      resultado=self.grad_rad(num1)
+    elif opcion==11: #rad_grad
+      resultado=self.rad_grad(num1)
+    elif opcion==12: #logaritmo10
+      resultado=self.logaritmo10(num1)   
+    elif opcion==13: #exponencial
+      resultado=self.exponencial(num1)
+    elif opcion==14: #raiz
+      resultado=self.raiz(num1) 
+    return resultado
+
+  def reinicio_apagado(self):
+    print("\nQue desea realizar? (presione un pin en la raspberry): ")
+    print("38) Realizar otra operacion")
+    print("40) Apagar")
+
+    operacion=2
+    while(operacion==2):
+      if GPIO.input(38): #otra operacion
+        operacion=0
+      elif GPIO.input(40): #apagar
+        operacion=1
+    return operacion
+
+    
+#programa principal
+seguir=0
+while(seguir!=1):
+    calcu=Calculadora(0,0) #se instancia el objeto de tipo calculadora
+    #imprime las operaciones
+    operac=calcu.menu()
+    num1=calcu.leer("Ingrese numero ")
+    if (operac<7):
+      num2=calcu.leer("Ingrese numero 2")
+    else:
+      num2=0
+
+    resultado=calcu.operar(operac,num1,num2)
+    calcu.imprimir(num1,num2,resultado,operac)
+    
+    seguir=calcu.reinicio_apagado() #pregunta si se apagara la calculadora
+    if seguir==0:
+      print("\n\n")
+      GPIO.cleanup() #reinicia la raspberry
+
+print("\nAPAGANDO....")
+
+
