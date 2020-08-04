@@ -181,6 +181,169 @@ Diagrama de la calculadora Cientifica
 
 ![image](https://user-images.githubusercontent.com/66221550/89251974-0ade0580-d5de-11ea-9b88-9e17262bb97c.png)
 
+7. MAPA DE VARIABLES
+
+Node-red
+
+➢ Números Randómicos: el término random es para generar número aleatorios.
+
+➢ parseInt(): comprueba el primer argumento, una cadena, e intenta devolver un entero
+de la base especificada.
+
+➢ return: es el valor que nos va a devolver.
+
+➢ msg.topic y msg.payload: propiedad que contiene el cuerpo del mensaje.
+
+Calculadora Científica
+
+➢ import: se utiliza para importar un módulo en este caso fue Math y import RPi.GPIO
+as GPIO.
+
+➢ self :sirve para acceder a un atributo dentro del objeto (clase) en sí.
+
+➢ GPIO: son los puertos que emulan a la de una raspberry.
+
+➢ setup: se define uno de los pines como entrada o salida.
+
+➢ class: tipo de dato definido por el usuario, y la crear instancias de una clase hace
+relación a la creación de objetos.
+
+➢ def: función usada para crear objetos funciones definidas por el usuario
+
+➢ __init__: su función es establecer un estado inicial en el objeto nada más instanciarlo,
+es decir, inicializar los atributos.
+
+➢ input:es para introducir datos de distintos tipos desde la entrada estándar.
+
+➢ return: es el valor que nos va a devolver.
+
+➢ if/elif/else: se utiliza para condiciones que sean más de una.
+
+➢ print: es lo que se va a presentar en pantalla.
+
+➢ while: repetir la condición hasta que la misma se cumpla.
+
+8. EXPLICACIÓN DEL CÓDIGO FUENTE
+
+Node-red
+
+Nuestro diseño que se diseñó con una interfaz HMI
+
+1) Vamos a tener que crear nuestra”pestaña” a la que va a estar asociada cualquier punto
+al que vayamos a unir y estas se unirán mediante líneas.
+
+2) En este trabajo se agrega un código con números randómicos que este se ejecutará en
+nuestra interfaz y así se podrá observar valores aleatorios y este a su vez interactúa
+con los demás diagramas que se implementó.
+
+Calculadora Científica
+
+En el caso de la calculadora hay un sin número de páginas y programas en el cual realizar una
+calculadora científica pero que también emule los puertos GPIO de una raspberry, pero ya
+entrando en detalle vamos a ver que es lo que nos ofrece la calculadora científica en nuestro
+programa entonces esta inicia desde una simple suma, resta, multiplicación, etc hasta
+encontrar el coseno de un número pero para que llegue a interpretar lo que deseamos se tuvo
+que utilizar los pines GPIO y para ello tuvimos que configurar cada uno pero sin olvidar que
+emulaba a una raspberry así que debíamos respetar cada una de sus partes que la componen.
+
+1) GPIO.setup(3, GPIO.IN): designamos los pines de entrada de la raspberry.
+
+2) class Calculadora: numero1=0, numero2=0 aquí llamamos a nuestra clase y a los
+atributos que esta tendrá.
+
+3) def __init__(self,numero1,numero2): aquí definimos nuestro constructor.
+
+4) def sumar(self,numero1,numero2):
+
+ return (numero1+numero2)
+ 
+Se define cada función que va a tener nuestra calculadora por ejemplo como vemos la
+suma de 2 números.
+
+5) while opcion==0:
+
+ if GPIO.input(3): #sumar
+ 
+ opcion=1
+ 
+Aquí va a repetirse la veces que sean necesarias hasta que “opcion” sea igual a un
+número asignado.
+
+6) def imprimir(self,num1,num2,resultado,operacion):
+
+ if operacion == 1:
+ 
+ print(num1,"+",num2,"=",resultado)
+ 
+En este paso se define como se va a presentar en pantalla el mensaje e la operación
+
+7) def operar(self,opcion,num1,num2):
+
+ resultado=0
+ 
+ if opcion==1: #sumar
+ 
+ resultado=self.sumar(num1,num2)
+ 
+Se tiene que crear una variable donde esta va a estar almacenada pero claro que
+vamos a llamar a la función sumar en este caso para que ejecute esa operación.
+
+8) def reinicio_apagado(self):
+
+ print("\nQue desea realizar? (presione un pin en la raspberry): ")
+ 
+ print("38) Realizar otra operacion")
+ 
+ print("40) Apagar")
+ 
+Después de realizar x operación nos va a preguntar si se desea hacer otra operación o
+aquí es donde termina.
+
+9. DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
+
+Node-red
+
+Instalación de node-red en laptop o computadora de escritorio y seguir los pasos siguientes:
+
+1. El paso principal es el de instalar node red y para ello nos dirigimos a la
+página https://nodejs.org/ y buscamos cual es para nosotros.
+
+2. Abrir nuestro node-red y digitar “node-red” y darle a enter.
+
+3. Nos desplegará una dirección, la copiamos y la pegamos en nuestro
+navegador.
+
+4. Se nos abrirá una ventana para comenzar a crear nuestra interfaz HMI.
+
+Calculadora Científica
+
+Para utilizar una las raspberry necesitamos la las librerías siguientes antes de programar
+nuestra calculadora:
+
+● import Math: sirve para dar acceso a funciones hiperbólicas, trigonométricas y
+logarítmicas para números reales.
+
+● import RPi.GPIO as GPIO: tenemos que importar la librería que nos permite manejar
+los GPIO.
+
+10. APORTACIONES
+
+Node-red
+
+Se utilizó una función que es de datos randomicos que prácticamente esto generaría datos
+aleatorios y por ende nuestra interfaz trabajaría de manera automática y esto serviría para las
+personas que quieran un interfaz similar y allí podríamos indicarles como funciona la
+interfaz, pero ya ingresando datos reales en la interfaz.
+
+Calculadora Cientifica
+
+En este caso para poder utilizar las librerías que se tienen digitar esta palabra “import” que
+significa incluir esta librería y lo que le sigue en este caso fue de Math para las funciones
+como “SENO” y RPi.GPIO as GPIO para poder utilizar los pines de una raspberry que son
+los siguientes como se muestra en la imagen:
+
+
+
 
 
 
