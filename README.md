@@ -398,6 +398,30 @@ momento de designar que va hacer cada una de ellas.
 
 13. CRONOGRAMA
 
+![image](https://user-images.githubusercontent.com/63418581/89252629-ea16af80-d5df-11ea-854c-428b56a4f705.png)
+
+14. BIBLIOGRAFÍA
+
+Aguilar, M. F. (2014). Programación en Python en la. Obtenido de
+http://sagitario.itmorelia.edu.mx/mfraga/materias/soemb/python.pdf
+
+Coen-Porisini, A. R. (2018). Smart transport and logistics: A Node-RED
+implementation. Check for updates Wiley.
+
+Duque, R. G. (2009). Python para todos. España. Obtenido de
+http://www.utic.edu.py/citil/images/Manuales/Python_para_todos.pdf
+
+Lekić, M., & Gardašević, G. (2018). IoT sensor integration to Node-RED platform.
+XVII Simposio Internacional INFOTEH, 5.
+OLIPHANT, T. E. (15 de 05 de 2007). Python for Scientific Computing. CiSE
+Computational Physics.
+
+Rossum, G. (1995). Manual de referencia de Python. CWI (Centro de Matemáticas e
+Informática).
+
+Chazallet, S. (2016). Python 3: los fundamentos del lenguaje. Ediciones ENI.
+
+
 
 
 
