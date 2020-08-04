@@ -342,8 +342,61 @@ significa incluir esta librería y lo que le sigue en este caso fue de Math para
 como “SENO” y RPi.GPIO as GPIO para poder utilizar los pines de una raspberry que son
 los siguientes como se muestra en la imagen:
 
+![image](https://user-images.githubusercontent.com/63418581/89252393-33b2ca80-d5df-11ea-87f4-c6ef08969925.png)
 
+11. CONCLUSIONES
 
+Node-red
+
+➢ El manejo del nodo red y de como crear nuestra interfaz es muy comprensible debido
+a que todos los elementos y componentes están prácticamente a la vista por lo que es
+amigable.
+
+➢ Node red al momento de utilizar es fácil de comunicar cada elemento de nuestra
+interfaz que estamos creando y se volvería más fácil comprender el diagrama que se
+está elaborando.
+
+➢ Node-RED ha demostrado ser ampliamente útil para representar la interfaz fácil de
+usar así como todos sus componentes Dashboard.
+
+Calculadora Científica
+
+➢ El implementar algo nuevo como son las librerías Math y de la raspberry debido a
+que se llegan a utilizar en temas puntuales como por ejemplo designar una GPIO si es
+suma, resta o cualquier otra operación y la de Math en las funciones como seno,
+coseno para utilizar.
+
+➢ Los pines GPIO son prácticamente lo mismo que la de una raspberry y es importante
+saber porque no todos los pines son los que se tienen acceso y se pueden programarlos
+ya que esos van a estar de un color rojo.
+
+➢ en este trabajo ya se unieron todos los temas que se vieron respecto a programación
+de python y que se logro el objetivo de diseñar nuestra calculadora científica.
+
+12. RECOMENDACIONES
+
+Node-red
+
+● Tener una introducción sobre lo que es Node-red y de los parámetros que estos los
+componen debido a que por más amigable que sea Node-red si no conocemos la
+funcionalidad de cada elemento es imposible utilizarlo.
+
+● Seguir los pasos de instalación de Node-red debido a que si no hacemos no podremos
+utilizar en la página de node-red porque ahí es donde se nos genera una dirección para
+poder conectarnos.
+
+Calculadora Científica
+
+➢ Llevar un orden adecuado porque puede ser fácil confundirse al momento de querer
+utilizar alguna función.
+
+➢ Tener una programación básica en objetos porque ya llegamos a utilizar métodos,
+clases, constructores.
+
+➢ Conocer como esta estructurada los GPIO de la raspberry porque eso es esencial
+momento de designar que va hacer cada una de ellas.
+
+13. CRONOGRAMA
 
 
 
