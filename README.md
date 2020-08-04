@@ -172,6 +172,12 @@ La definición de una función comienza por la palabra clave def seguida por el 
 Diagrama de la calculadora Cientifica
 
 
+![image](https://user-images.githubusercontent.com/66221550/89251739-6b207780-d5dd-11ea-8125-11b4f4366943.png)
+
+
+.6. LISTA DE COMPONENTES 
+
+
 
 
 
