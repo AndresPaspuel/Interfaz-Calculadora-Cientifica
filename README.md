@@ -67,6 +67,7 @@ Valiente Lerma, Arturo José en el año 2017 en la ciudad de Valencia se realiz�
 
 NODE-RED
 
+
 Según (Lekić & Gardašević, 2018), Node-RED es una herramienta de desarrollo basada en flujo de código abierto para la integración de dispositivos de hardware IoT, API(interfaces de programación de aplicaciones) y servicios en línea desarrollados por IBM.
 
 Node-RED es una herramienta gratuita basada en JavaScript, construida en la plataforma Node.js que proporciona un editor visual de flujo basado en un navegador. El sistema contiene nodos que están representados por los iconos apropiados. Y funciona de dos maneras: arrastrar, soltar y conectar nodos, o importar código JavaScript.
@@ -80,6 +81,69 @@ Node-RED contiene tres componentes básicos:
   Panel de nodos. -    Panel de flujos  -  Panel de información y depuración.
   
   
-  
-  
+  ![image](https://user-images.githubusercontent.com/66221550/89250662-dddc2380-d5da-11ea-96cd-d9ac630fa1cb.png)
 
+
+
+Node-RED es una herramienta poderosa y flexible que se utiliza para crear prototipos, siendo la esencia de esta herramienta permitir a los ingenieros y técnicos simplemente crear y configurar aplicaciones en tiempo real en dispositivos finales.
+
+
+Además, (Coen-Porisini, 2018) propone que Node-RED es una herramienta de programación basada en flujos y basada en eventos que pueden comunicarse entre sí y regular el flujo de la información dentro del sistema diseñado. Es una representación visual basada en el navegador ayudando a los desarrolladores a comprender mejor las interacciones que ocurren dentro de toda la red IoT interactuando con entidades tanto de hardware como Sensores y de software como servicios, de igual manera destaca sobre la interfaz que nos brinda Node-RED además de permitir la integración de diferentes tecnologías como:
+
+
+MongoDB: que es un motor de base de datos no relacional debido a que su mayor eficiencia en responder en muy poco tiempo
+
+
+Java: es utilizado aquí debido a su amplia adopción en implementaciones reales.
+
+
+Transporte de telemetría de la cola de mensajes (MQTT): se utiliza como un método ligero de publicación y suscripción para compartir información y notificaciones del sistema además de controlar el flujo de datos que proporciona la lógica de las aplicaciones IoT. 
+
+
+Según (Rossum, 1995) Python es un lenguaje de programación simple pero potente e interpretado diferente a la programación en C y Shell ideal para la programación desechable y la creación rápida de prototipos. Su sintaxis se elabora a partir de construcciones tomadas de una variedad de otros idiomas, el intérprete de Python se amplía fácilmente con nuevas funciones y tipos de datos implementados en C. Python de igual manera es adecuado como un lenguaje de extensión para aplicaciones C altamente personalizables para varios sistemas operativos como por ejemplos UNIX (incluido Linux), el sistema operativo Apple Macintosh, MSDOS describiéndolo a esta sintaxis y la semántica central del lenguaje como consiso pero intenta ser exacto y completo.
+
+De igual manera (Duque, 2009) argumenta que Python es un lenguaje de programación creado por Guido Van Rossum a principios de los años 90 cuyo nombre está inspirado en el grupo de cómicos ingleses “Monty Python”. Es un lenguaje similar a Perl, pero con una sintaxis muy limpia y que favorece un código legible.
+
+
+Se trata de un lenguaje interpretado o de script, con tipiado dinámico, fuertemente tipiado, multiplataforma y orientado a objetos.
+
+
+La ventaja de los lenguajes compilados es que su ejecución es más rápida. Sin embargo, los lenguajes interpretados son más flexibles y más portables. Python tiene, no obstante, muchas de las características de los lenguajes compilados, por lo que se podría decir que es semi interpretado. En Python, como en Java y muchos otros lenguajes, el código fuente se traduce a un pseudo código máquina intermedio llamado bytecode la primera vez que se ejecuta, generando archivos .pyc o .pyo (bytecode optimizado), que son los que se ejecutarán en sucesivas ocasiones.
+
+
+Tipado dinámico
+
+La característica de tipado dinámico se refiere a que no es necesario declarar el tipo de dato que va a contener una determinada variable, sino que su tipo se determinará en tiempo de ejecución según el tipo del valor al que se asigne, y el tipo de esta variable puede cambiar si se le asigna un valor de otro tipo.
+
+
+Orientado a objetos
+
+
+>>> import RPi.GPIO as GPIO #importa la librería de GPIO
+
+#usar número de terminal no de GPIO
+
+
+La orientación a objetos es un paradigma de programación en el que los conceptos del mundo real relevantes para nuestro problema se trasladan a clases y objetos en nuestro programa. La ejecución del programa consiste en una serie de interacciones entre los objetos. Python también permite la programación imperativa, programación funcional y programación orientada a aspectos.
+
+
+Python es un lenguaje que todo el mundo debería conocer. Su sintaxis simple, clara y sencilla; el tipado dinámico, el gestor de memoria, la gran cantidad de librerías disponibles y la potencia del lenguaje, entre otros, hacen que desarrollar una aplicación en Python sea sencillo
+
+
+Raspberry Pi
+
+
+Según (Aguilar, 2014) la Raspberry Pi es una computadora en una sola tarjeta (Single-Board Computer) creada por la Raspberry Pi Foundation para promover la enseñanza de la programación en escuelas y países en desarrollo.
+
+
+Biblioteca para acceso a GPIO
+
+
+>>> import RPi.GPIO as GPIO #importa la librería de GPIO
+
+#usar número de terminal no de GPIO
+
+>>>GPIO.setmode(GPIO.BOARD)
+
+
+ 
