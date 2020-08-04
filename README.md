@@ -419,7 +419,7 @@ Computational Physics.
 Rossum, G. (1995). Manual de referencia de Python. CWI (Centro de Matemáticas e
 Informática).
 
-Chazallet, S. (2016). Python 3: los fundamentos del lenguaje. Ediciones eni.
+Chazallet, S. (2016). Python 3: los fundamentos del lenguaje. Ediciones ENI
 
 
 
