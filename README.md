@@ -167,6 +167,12 @@ Python incluye muchas funciones internas, tal como printf, pero también se pued
 
 La definición de una función comienza por la palabra clave def seguida por el nombre de la función y paréntesis Los parámetros de entrada se colocan entre los parént
 
+.5.
+
+Diagrama de la calculadora Cientifica
+
+
+
 
 
  
