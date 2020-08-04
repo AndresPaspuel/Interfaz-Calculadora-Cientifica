@@ -130,6 +130,14 @@ Raspberry Pi
 
 Según (Aguilar, 2014) la Raspberry Pi es una computadora en una sola tarjeta (Single-Board Computer) creada por la Raspberry Pi Foundation para promover la enseñanza de la programación en escuelas y países en desarrollo.
 
+Biblioteca para acceso a GPIO
+>>> import RPi.GPIO as GPIO #importa la librería de GPIO
+#usar número de terminal no de GPIO
+>>>GPIO.setmode(GPIO.BOARD)
+ #coigura como salida en bajo a la terminal 11 nf>>>GPIO.setup(11,GPIO.OUT,GPIO.PUD_OFF,GPIO.LOW)
+ >>>GPIO.output(11,GPIO.HIGH) #pone la salida en alto
+
+
 
 
 
