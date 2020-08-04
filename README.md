@@ -119,11 +119,6 @@ La característica de tipado dinámico se refiere a que no es necesario declarar
 Orientado a objetos
 
 
->>> import RPi.GPIO as GPIO #importa la librería de GPIO
-
-#usar número de terminal no de GPIO
-
-
 La orientación a objetos es un paradigma de programación en el que los conceptos del mundo real relevantes para nuestro problema se trasladan a clases y objetos en nuestro programa. La ejecución del programa consiste en una serie de interacciones entre los objetos. Python también permite la programación imperativa, programación funcional y programación orientada a aspectos.
 
 
@@ -136,14 +131,7 @@ Raspberry Pi
 Según (Aguilar, 2014) la Raspberry Pi es una computadora en una sola tarjeta (Single-Board Computer) creada por la Raspberry Pi Foundation para promover la enseñanza de la programación en escuelas y países en desarrollo.
 
 
-Biblioteca para acceso a GPIO
 
-
->>> import RPi.GPIO as GPIO #importa la librería de GPIO
-
-#usar número de terminal no de GPIO
-
->>>GPIO.setmode(GPIO.BOARD)
 
 
  
