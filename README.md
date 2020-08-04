@@ -131,19 +131,41 @@ Raspberry Pi
 Según (Aguilar, 2014) la Raspberry Pi es una computadora en una sola tarjeta (Single-Board Computer) creada por la Raspberry Pi Foundation para promover la enseñanza de la programación en escuelas y países en desarrollo.
 
 Biblioteca para acceso a GPIO
-
 >>> import RPi.GPIO as GPIO #importa la librería de GPIO
-
 #usar número de terminal no de GPIO
-
 >>>GPIO.setmode(GPIO.BOARD)
-
  #coigura como salida en bajo a la terminal 11 nf>>>GPIO.setup(11,GPIO.OUT,GPIO.PUD_OFF,GPIO.LOW)
- 
  >>>GPIO.output(11,GPIO.HIGH) #pone la salida en alto
 
 
 
+
+Estructuras de control básicas
+
+Las estructuras de control más comunes son if, if - else y while, que son controladas por una condición lógica, separada del bloque controlado por : El inicio y el fin del bloque controlado depende únicamente de la indentación
+
+Tips básicos de Python
+
+Importante: Python es sensible a mayúsculas y minúsculas
+
+Numerico: int (1 45 -678), float (12.234 -43.56), complex (-1.23+34.9j 56.1-156j)
+
+Cadenas de caracteres: “ Hola”, ‘Mundo’
+
+// división de punto flotante: 3/2=1.5
+
+// división entera: 3//2=1
+
+type(variable) regresa el tipo de variable
+
+Funciones
+
+
+Una función de un bloque de código organizado, probado y reutilizable. Permiten que los programas sean modulares.
+
+Python incluye muchas funciones internas, tal como printf, pero también se puede construir funciones propias personalizadas, llamadas funciones definidas por el usuario
+
+La definición de una función comienza por la palabra clave def seguida por el nombre de la función y paréntesis Los parámetros de entrada se colocan entre los parént
 
 
 
